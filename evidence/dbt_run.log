@@ -1,0 +1,17 @@
+[0m03:06:06  Running with dbt=1.12.6
+[0m03:06:07  Registered adapter: duckdb=1.11.0
+[0m03:06:07  Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m03:06:08  Found 2 models, 9 data tests, 500 macros
+[0m03:06:08  
+[0m03:06:08  Concurrency: 2 threads (target='dev')
+[0m03:06:08  
+[0m03:06:09  1 of 2 START sql view model main.stg_ventas .................................... [RUN]
+[0m03:06:09  1 of 2 OK created sql view model main.stg_ventas ............................... [[32mOK[0m in 0.10s]
+[0m03:06:09  2 of 2 START sql table model main.fct_ingresos_diarios ......................... [RUN]
+[0m03:06:09  2 of 2 OK created sql table model main.fct_ingresos_diarios .................... [[32mOK[0m in 0.10s]
+[0m03:06:09  
+[0m03:06:09  Finished running 1 table model, 1 view model in 0 hours 0 minutes and 0.39 seconds (0.39s).
+[0m03:06:09  
+[0m03:06:09  [32mCompleted successfully[0m
+[0m03:06:09  
+[0m03:06:09  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=2

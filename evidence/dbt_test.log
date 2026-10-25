@@ -1,0 +1,30 @@
+[0m03:06:11  Running with dbt=1.12.6
+[0m03:06:11  Registered adapter: duckdb=1.11.0
+[0m03:06:12  Found 2 models, 9 data tests, 500 macros
+[0m03:06:12  
+[0m03:06:12  Concurrency: 2 threads (target='dev')
+[0m03:06:12  
+[0m03:06:12  1 of 9 START test assert_cantidad_positiva ..................................... [RUN]
+[0m03:06:12  2 of 9 START test assert_ingreso_no_negativo ................................... [RUN]
+[0m03:06:12  2 of 9 PASS assert_ingreso_no_negativo ......................................... [[32mPASS[0m in 0.05s]
+[0m03:06:12  3 of 9 START test not_null_fct_ingresos_diarios_fecha .......................... [RUN]
+[0m03:06:12  3 of 9 PASS not_null_fct_ingresos_diarios_fecha ................................ [[32mPASS[0m in 0.03s]
+[0m03:06:12  4 of 9 START test not_null_fct_ingresos_diarios_ingreso_total .................. [RUN]
+[0m03:06:12  1 of 9 PASS assert_cantidad_positiva ........................................... [[32mPASS[0m in 0.12s]
+[0m03:06:12  5 of 9 START test not_null_fct_ingresos_diarios_producto_id .................... [RUN]
+[0m03:06:12  4 of 9 PASS not_null_fct_ingresos_diarios_ingreso_total ........................ [[32mPASS[0m in 0.04s]
+[0m03:06:12  6 of 9 START test not_null_stg_ventas_cantidad ................................. [RUN]
+[0m03:06:12  5 of 9 PASS not_null_fct_ingresos_diarios_producto_id .......................... [[32mPASS[0m in 0.04s]
+[0m03:06:12  7 of 9 START test not_null_stg_ventas_fecha .................................... [RUN]
+[0m03:06:12  6 of 9 PASS not_null_stg_ventas_cantidad ....................................... [[32mPASS[0m in 0.05s]
+[0m03:06:12  8 of 9 START test not_null_stg_ventas_precio_unitario .......................... [RUN]
+[0m03:06:12  7 of 9 PASS not_null_stg_ventas_fecha .......................................... [[32mPASS[0m in 0.04s]
+[0m03:06:12  9 of 9 START test not_null_stg_ventas_producto_id .............................. [RUN]
+[0m03:06:12  8 of 9 PASS not_null_stg_ventas_precio_unitario ................................ [[32mPASS[0m in 0.04s]
+[0m03:06:12  9 of 9 PASS not_null_stg_ventas_producto_id .................................... [[32mPASS[0m in 0.04s]
+[0m03:06:12  
+[0m03:06:12  Finished running 9 data tests in 0 hours 0 minutes and 0.35 seconds (0.35s).
+[0m03:06:12  
+[0m03:06:12  [32mCompleted successfully[0m
+[0m03:06:12  
+[0m03:06:12  Done. PASS=9 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=9

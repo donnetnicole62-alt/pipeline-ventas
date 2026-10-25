@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_ventas
+    description: "Ventas crudas tipadas."
+    columns:
+      - name: fecha
+        tests: [not_null]
+      - name: producto_id
+        tests: [not_null]
+      - name: cantidad
+        tests: [not_null]
+      - name: precio_unitario
+        tests: [not_null]
+
+  - name: fct_ingresos_diarios
+    description: "Ingreso total por fecha y producto."
+    columns:
+      - name: fecha
+        tests: [not_null]
+      - name: producto_id
+        tests: [not_null]
+      - name: ingreso_total
+        tests: [not_null]

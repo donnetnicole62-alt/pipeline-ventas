@@ -1,0 +1,1391 @@
+[0m23:25:18.737754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BBCAB01A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BBEDFBED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BBEDFBB10>]}
+
+
+============================== 23:25:18.743939 | 8d4156fd-7631-4bb7-81f1-d2a732db3f4b ==============================
+[0m23:25:18.743939 [info ] [MainThread]: Running with dbt=1.12.6
+[0m23:25:18.744634 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run --profiles-dir .', 'log_path': 'C:\\Users\\Usuario Coder\\Documents\\Data Engineering\\dbt_project\\logs'}
+[0m23:25:19.110976 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8d4156fd-7631-4bb7-81f1-d2a732db3f4b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BBCCCCFC0>]}
+[0m23:25:19.167425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8d4156fd-7631-4bb7-81f1-d2a732db3f4b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BBC42A580>]}
+[0m23:25:19.184088 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m23:25:19.472532 [debug] [MainThread]: checksum: c29b027e8ff215bd14db6128609fc1c48f22fb8c501ab4ce82aea29507899a3b, vars: {}, profile: ventas_dbt, target: dev, version: 1.12.6
+[0m23:25:19.473516 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:25:19.474104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '8d4156fd-7631-4bb7-81f1-d2a732db3f4b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BBF068950>]}
+[0m23:25:22.245847 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8d4156fd-7631-4bb7-81f1-d2a732db3f4b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BBF59B890>]}
+[0m23:25:22.330665 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\manifest.json
+[0m23:25:22.368363 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\semantic_manifest.json
+[0m23:25:22.420345 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\osi_document.json
+[0m23:25:22.443969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8d4156fd-7631-4bb7-81f1-d2a732db3f4b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BBFBAFCB0>]}
+[0m23:25:22.444460 [info ] [MainThread]: Found 2 models, 9 data tests, 500 macros
+[0m23:25:22.445117 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8d4156fd-7631-4bb7-81f1-d2a732db3f4b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BBF550A10>]}
+[0m23:25:22.447435 [info ] [MainThread]: 
+[0m23:25:22.447796 [info ] [MainThread]: Concurrency: 2 threads (target='dev')
+[0m23:25:22.448120 [info ] [MainThread]: 
+[0m23:25:22.448628 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m23:25:22.452413 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse'
+[0m23:25:25.133962 [debug] [ThreadPool]: Using duckdb connection "list_warehouse"
+[0m23:25:25.134308 [debug] [ThreadPool]: On list_warehouse: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "connection_name": "list_warehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"warehouse"'
+    
+  
+  
+[0m23:25:25.134543 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:25:25.197888 [debug] [ThreadPool]: SQL status: OK in 0.063 seconds
+[0m23:25:25.199136 [debug] [ThreadPool]: On list_warehouse: Close
+[0m23:25:25.199997 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_warehouse, now create_warehouse_main)
+[0m23:25:25.200653 [debug] [ThreadPool]: Creating schema "database: "warehouse"
+schema: "main"
+"
+[0m23:25:25.206647 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m23:25:25.206943 [debug] [ThreadPool]: On create_warehouse_main: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "connection_name": "create_warehouse_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='warehouse'
+        and type != 'duckdb'
+    
+  
+[0m23:25:25.207167 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:25:25.209812 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m23:25:25.210819 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m23:25:25.211060 [debug] [ThreadPool]: On create_warehouse_main: BEGIN
+[0m23:25:25.212650 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m23:25:25.212900 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m23:25:25.213115 [debug] [ThreadPool]: On create_warehouse_main: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "connection_name": "create_warehouse_main"} */
+
+    
+    
+        create schema if not exists "warehouse"."main"
+    
+[0m23:25:25.215101 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m23:25:25.215772 [debug] [ThreadPool]: On create_warehouse_main: COMMIT
+[0m23:25:25.216008 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m23:25:25.216222 [debug] [ThreadPool]: On create_warehouse_main: COMMIT
+[0m23:25:25.216718 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:25:25.216993 [debug] [ThreadPool]: On create_warehouse_main: Close
+[0m23:25:25.218387 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_main'
+[0m23:25:25.221963 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_main"
+[0m23:25:25.222219 [debug] [ThreadPool]: On list_warehouse_main: BEGIN
+[0m23:25:25.222427 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:25:25.223200 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m23:25:25.223463 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_main"
+[0m23:25:25.223678 [debug] [ThreadPool]: On list_warehouse_main: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "connection_name": "list_warehouse_main"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m23:25:25.252325 [debug] [ThreadPool]: SQL status: OK in 0.028 seconds
+[0m23:25:25.254504 [debug] [ThreadPool]: On list_warehouse_main: ROLLBACK
+[0m23:25:25.255058 [debug] [ThreadPool]: On list_warehouse_main: Close
+[0m23:25:25.256116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8d4156fd-7631-4bb7-81f1-d2a732db3f4b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BBFAB99D0>]}
+[0m23:25:25.256604 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:25:25.256830 [debug] [MainThread]: On master: BEGIN
+[0m23:25:25.257022 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:25:25.257561 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:25:25.257798 [debug] [MainThread]: On master: COMMIT
+[0m23:25:25.258003 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:25:25.258190 [debug] [MainThread]: On master: COMMIT
+[0m23:25:25.258574 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:25:25.258791 [debug] [MainThread]: On master: Close
+[0m23:25:25.285290 [debug] [Thread-1 (]: Began running node model.ventas_dbt.stg_ventas
+[0m23:25:25.285781 [info ] [Thread-1 (]: 1 of 2 START sql view model main.stg_ventas .................................... [RUN]
+[0m23:25:25.286370 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.ventas_dbt.stg_ventas'
+[0m23:25:25.286644 [debug] [Thread-1 (]: Began compiling node model.ventas_dbt.stg_ventas
+[0m23:25:25.290916 [debug] [Thread-1 (]: Writing injected SQL for node "model.ventas_dbt.stg_ventas"
+[0m23:25:25.292662 [debug] [Thread-1 (]: Began executing node model.ventas_dbt.stg_ventas
+[0m23:25:25.318138 [debug] [Thread-1 (]: Writing runtime sql for node "model.ventas_dbt.stg_ventas"
+[0m23:25:25.320507 [debug] [Thread-1 (]: Using duckdb connection "model.ventas_dbt.stg_ventas"
+[0m23:25:25.320854 [debug] [Thread-1 (]: On model.ventas_dbt.stg_ventas: BEGIN
+[0m23:25:25.321106 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:25:25.322303 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:25:25.322768 [debug] [Thread-1 (]: Using duckdb connection "model.ventas_dbt.stg_ventas"
+[0m23:25:25.323053 [debug] [Thread-1 (]: On model.ventas_dbt.stg_ventas: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "model.ventas_dbt.stg_ventas"} */
+
+  
+  create view "warehouse"."main"."stg_ventas__dbt_tmp" as (
+    -- Capa staging: lee el CSV crudo y tipa las columnas.
+select
+    cast(fecha as date)             as fecha,
+    cast(producto_id as integer)    as producto_id,
+    cast(cantidad as integer)       as cantidad,
+    cast(precio_unitario as double) as precio_unitario
+from read_csv_auto('../data/ventas.csv', header = true)
+  );
+
+[0m23:25:25.356012 [debug] [Thread-1 (]: SQL status: OK in 0.033 seconds
+[0m23:25:25.360633 [debug] [Thread-1 (]: Using duckdb connection "model.ventas_dbt.stg_ventas"
+[0m23:25:25.361305 [debug] [Thread-1 (]: On model.ventas_dbt.stg_ventas: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "model.ventas_dbt.stg_ventas"} */
+alter view "warehouse"."main"."stg_ventas" rename to "stg_ventas__dbt_backup"
+[0m23:25:25.364096 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m23:25:25.365866 [debug] [Thread-1 (]: Using duckdb connection "model.ventas_dbt.stg_ventas"
+[0m23:25:25.366149 [debug] [Thread-1 (]: On model.ventas_dbt.stg_ventas: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "model.ventas_dbt.stg_ventas"} */
+alter view "warehouse"."main"."stg_ventas__dbt_tmp" rename to "stg_ventas"
+[0m23:25:25.366793 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m23:25:25.378541 [debug] [Thread-1 (]: On model.ventas_dbt.stg_ventas: COMMIT
+[0m23:25:25.378920 [debug] [Thread-1 (]: Using duckdb connection "model.ventas_dbt.stg_ventas"
+[0m23:25:25.379194 [debug] [Thread-1 (]: On model.ventas_dbt.stg_ventas: COMMIT
+[0m23:25:25.382682 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m23:25:25.386524 [debug] [Thread-1 (]: Using duckdb connection "model.ventas_dbt.stg_ventas"
+[0m23:25:25.386838 [debug] [Thread-1 (]: On model.ventas_dbt.stg_ventas: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "model.ventas_dbt.stg_ventas"} */
+
+      drop view if exists "warehouse"."main"."stg_ventas__dbt_backup" cascade
+    
+[0m23:25:25.388717 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m23:25:25.390814 [debug] [Thread-1 (]: On model.ventas_dbt.stg_ventas: Close
+[0m23:25:25.393211 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8d4156fd-7631-4bb7-81f1-d2a732db3f4b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BBFAE3A10>]}
+[0m23:25:25.393768 [info ] [Thread-1 (]: 1 of 2 OK created sql view model main.stg_ventas ............................... [[32mOK[0m in 0.11s]
+[0m23:25:25.394418 [debug] [Thread-1 (]: Finished running node model.ventas_dbt.stg_ventas
+[0m23:25:25.395094 [debug] [Thread-2 (]: Began running node model.ventas_dbt.fct_ingresos_diarios
+[0m23:25:25.395492 [info ] [Thread-2 (]: 2 of 2 START sql table model main.fct_ingresos_diarios ......................... [RUN]
+[0m23:25:25.396156 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.ventas_dbt.fct_ingresos_diarios'
+[0m23:25:25.396429 [debug] [Thread-2 (]: Began compiling node model.ventas_dbt.fct_ingresos_diarios
+[0m23:25:25.397845 [debug] [Thread-2 (]: Writing injected SQL for node "model.ventas_dbt.fct_ingresos_diarios"
+[0m23:25:25.398906 [debug] [Thread-2 (]: Began executing node model.ventas_dbt.fct_ingresos_diarios
+[0m23:25:25.430332 [debug] [Thread-2 (]: Writing runtime sql for node "model.ventas_dbt.fct_ingresos_diarios"
+[0m23:25:25.432057 [debug] [Thread-2 (]: Using duckdb connection "model.ventas_dbt.fct_ingresos_diarios"
+[0m23:25:25.432447 [debug] [Thread-2 (]: On model.ventas_dbt.fct_ingresos_diarios: BEGIN
+[0m23:25:25.432697 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m23:25:25.433340 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m23:25:25.433624 [debug] [Thread-2 (]: Using duckdb connection "model.ventas_dbt.fct_ingresos_diarios"
+[0m23:25:25.433868 [debug] [Thread-2 (]: On model.ventas_dbt.fct_ingresos_diarios: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "model.ventas_dbt.fct_ingresos_diarios"} */
+
+    
+
+    create  table
+      "warehouse"."main"."fct_ingresos_diarios__dbt_tmp"
+  
+    
+    as (
+      -- Capa mart: mismo resultado que el job PySpark, expresado en SQL (permite cruzar resultados).
+select
+    fecha,
+    producto_id,
+    round(sum(cantidad * precio_unitario), 2) as ingreso_total
+from "warehouse"."main"."stg_ventas"
+group by fecha, producto_id
+order by fecha, producto_id
+    );
+    
+  
+[0m23:25:25.481281 [debug] [Thread-2 (]: SQL status: OK in 0.047 seconds
+[0m23:25:25.485585 [debug] [Thread-2 (]: Using duckdb connection "model.ventas_dbt.fct_ingresos_diarios"
+[0m23:25:25.485938 [debug] [Thread-2 (]: On model.ventas_dbt.fct_ingresos_diarios: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "model.ventas_dbt.fct_ingresos_diarios"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE database_name = 'warehouse'
+      AND schema_name = 'main'
+      AND table_name = 'fct_ingresos_diarios'
+  
+[0m23:25:25.487702 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m23:25:25.490082 [debug] [Thread-2 (]: Using duckdb connection "model.ventas_dbt.fct_ingresos_diarios"
+[0m23:25:25.490412 [debug] [Thread-2 (]: On model.ventas_dbt.fct_ingresos_diarios: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "model.ventas_dbt.fct_ingresos_diarios"} */
+alter table "warehouse"."main"."fct_ingresos_diarios" rename to "fct_ingresos_diarios__dbt_backup"
+[0m23:25:25.491471 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m23:25:25.493265 [debug] [Thread-2 (]: Using duckdb connection "model.ventas_dbt.fct_ingresos_diarios"
+[0m23:25:25.493607 [debug] [Thread-2 (]: On model.ventas_dbt.fct_ingresos_diarios: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "model.ventas_dbt.fct_ingresos_diarios"} */
+alter table "warehouse"."main"."fct_ingresos_diarios__dbt_tmp" rename to "fct_ingresos_diarios"
+[0m23:25:25.494263 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m23:25:25.498168 [debug] [Thread-2 (]: On model.ventas_dbt.fct_ingresos_diarios: COMMIT
+[0m23:25:25.498467 [debug] [Thread-2 (]: Using duckdb connection "model.ventas_dbt.fct_ingresos_diarios"
+[0m23:25:25.498719 [debug] [Thread-2 (]: On model.ventas_dbt.fct_ingresos_diarios: COMMIT
+[0m23:25:25.501691 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m23:25:25.503053 [debug] [Thread-2 (]: Using duckdb connection "model.ventas_dbt.fct_ingresos_diarios"
+[0m23:25:25.503351 [debug] [Thread-2 (]: On model.ventas_dbt.fct_ingresos_diarios: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "model.ventas_dbt.fct_ingresos_diarios"} */
+
+      drop table if exists "warehouse"."main"."fct_ingresos_diarios__dbt_backup" cascade
+    
+[0m23:25:25.505165 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m23:25:25.506330 [debug] [Thread-2 (]: On model.ventas_dbt.fct_ingresos_diarios: Close
+[0m23:25:25.506865 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8d4156fd-7631-4bb7-81f1-d2a732db3f4b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BBFE877F0>]}
+[0m23:25:25.507350 [info ] [Thread-2 (]: 2 of 2 OK created sql table model main.fct_ingresos_diarios .................... [[32mOK[0m in 0.11s]
+[0m23:25:25.507948 [debug] [Thread-2 (]: Finished running node model.ventas_dbt.fct_ingresos_diarios
+[0m23:25:25.509143 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:25:25.509394 [debug] [MainThread]: On master: BEGIN
+[0m23:25:25.509600 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:25:25.510134 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:25:25.510367 [debug] [MainThread]: On master: COMMIT
+[0m23:25:25.510587 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:25:25.510783 [debug] [MainThread]: On master: COMMIT
+[0m23:25:25.511181 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:25:25.511407 [debug] [MainThread]: On master: Close
+[0m23:25:25.511703 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:25:25.511889 [debug] [MainThread]: Connection 'create_warehouse_main' was properly closed.
+[0m23:25:25.512058 [debug] [MainThread]: Connection 'list_warehouse_main' was properly closed.
+[0m23:25:25.512226 [debug] [MainThread]: Connection 'model.ventas_dbt.stg_ventas' was properly closed.
+[0m23:25:25.512387 [debug] [MainThread]: Connection 'model.ventas_dbt.fct_ingresos_diarios' was properly closed.
+[0m23:25:25.512615 [info ] [MainThread]: 
+[0m23:25:25.512918 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 3.06 seconds (3.06s).
+[0m23:25:25.513984 [debug] [MainThread]: Command end result
+[0m23:25:25.542152 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\manifest.json
+[0m23:25:25.545275 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\semantic_manifest.json
+[0m23:25:25.547412 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\osi_document.json
+[0m23:25:25.553299 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\run_results.json
+[0m23:25:25.553622 [info ] [MainThread]: 
+[0m23:25:25.554216 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:25:25.554720 [info ] [MainThread]: 
+[0m23:25:25.555515 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=2
+[0m23:25:25.556661 [debug] [MainThread]: Command `dbt run` succeeded at 23:25:25.556513 after 6.98 seconds
+[0m23:25:25.557106 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BBA83FED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BBFBBF250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012BBEE12E40>]}
+[0m23:25:25.557518 [debug] [MainThread]: Flushing usage events
+[0m23:25:26.271548 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:26:49.298317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF9DB401A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF9FE8BED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF9FE8BB10>]}
+
+
+============================== 23:26:49.302534 | b9434eeb-3e43-465e-be3c-1876f594f1b2 ==============================
+[0m23:26:49.302534 [info ] [MainThread]: Running with dbt=1.12.6
+[0m23:26:49.303226 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'invocation_command': 'dbt test --profiles-dir .', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\Users\\Usuario Coder\\Documents\\Data Engineering\\dbt_project\\logs'}
+[0m23:26:49.581943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b9434eeb-3e43-465e-be3c-1876f594f1b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF9DD5CFC0>]}
+[0m23:26:49.637334 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b9434eeb-3e43-465e-be3c-1876f594f1b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF9D4CA580>]}
+[0m23:26:49.640408 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m23:26:49.812618 [debug] [MainThread]: checksum: c29b027e8ff215bd14db6128609fc1c48f22fb8c501ab4ce82aea29507899a3b, vars: {}, profile: ventas_dbt, target: dev, version: 1.12.6
+[0m23:26:49.943523 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:26:49.943868 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:26:49.944106 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:26:49.952391 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b9434eeb-3e43-465e-be3c-1876f594f1b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFA0656950>]}
+[0m23:26:50.064187 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\manifest.json
+[0m23:26:50.066462 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\semantic_manifest.json
+[0m23:26:50.100193 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\osi_document.json
+[0m23:26:50.129305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b9434eeb-3e43-465e-be3c-1876f594f1b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFA08533E0>]}
+[0m23:26:50.129761 [info ] [MainThread]: Found 2 models, 9 data tests, 500 macros
+[0m23:26:50.130304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b9434eeb-3e43-465e-be3c-1876f594f1b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFA08597F0>]}
+[0m23:26:50.132234 [info ] [MainThread]: 
+[0m23:26:50.132625 [info ] [MainThread]: Concurrency: 2 threads (target='dev')
+[0m23:26:50.132901 [info ] [MainThread]: 
+[0m23:26:50.133348 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m23:26:50.137357 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_main'
+[0m23:26:50.194548 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_main"
+[0m23:26:50.194878 [debug] [ThreadPool]: On list_warehouse_main: BEGIN
+[0m23:26:50.195099 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:26:50.240945 [debug] [ThreadPool]: SQL status: OK in 0.046 seconds
+[0m23:26:50.241292 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_main"
+[0m23:26:50.241515 [debug] [ThreadPool]: On list_warehouse_main: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "connection_name": "list_warehouse_main"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m23:26:50.257666 [debug] [ThreadPool]: SQL status: OK in 0.016 seconds
+[0m23:26:50.259242 [debug] [ThreadPool]: On list_warehouse_main: ROLLBACK
+[0m23:26:50.259779 [debug] [ThreadPool]: On list_warehouse_main: Close
+[0m23:26:50.260843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b9434eeb-3e43-465e-be3c-1876f594f1b2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFA0A4ADD0>]}
+[0m23:26:50.261224 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:26:50.261438 [debug] [MainThread]: On master: BEGIN
+[0m23:26:50.261629 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:26:50.262075 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:26:50.262301 [debug] [MainThread]: On master: COMMIT
+[0m23:26:50.262516 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:26:50.262706 [debug] [MainThread]: On master: COMMIT
+[0m23:26:50.263068 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:26:50.263289 [debug] [MainThread]: On master: Close
+[0m23:26:50.267203 [debug] [Thread-2 (]: Began running node test.ventas_dbt.assert_ingreso_no_negativo
+[0m23:26:50.267946 [debug] [Thread-1 (]: Began running node test.ventas_dbt.assert_cantidad_positiva
+[0m23:26:50.267567 [info ] [Thread-2 (]: 2 of 9 START test assert_ingreso_no_negativo ................................... [RUN]
+[0m23:26:50.268881 [debug] [Thread-2 (]: Acquiring new duckdb connection 'test.ventas_dbt.assert_ingreso_no_negativo'
+[0m23:26:50.269224 [debug] [Thread-2 (]: Began compiling node test.ventas_dbt.assert_ingreso_no_negativo
+[0m23:26:50.274104 [debug] [Thread-2 (]: Writing injected SQL for node "test.ventas_dbt.assert_ingreso_no_negativo"
+[0m23:26:50.268279 [info ] [Thread-1 (]: 1 of 9 START test assert_cantidad_positiva ..................................... [RUN]
+[0m23:26:50.274952 [debug] [Thread-1 (]: Acquiring new duckdb connection 'test.ventas_dbt.assert_cantidad_positiva'
+[0m23:26:50.275487 [debug] [Thread-1 (]: Began compiling node test.ventas_dbt.assert_cantidad_positiva
+[0m23:26:50.277866 [debug] [Thread-1 (]: Writing injected SQL for node "test.ventas_dbt.assert_cantidad_positiva"
+[0m23:26:50.279044 [debug] [Thread-2 (]: Began executing node test.ventas_dbt.assert_ingreso_no_negativo
+[0m23:26:50.296501 [debug] [Thread-2 (]: Writing runtime sql for node "test.ventas_dbt.assert_ingreso_no_negativo"
+[0m23:26:50.297249 [debug] [Thread-1 (]: Began executing node test.ventas_dbt.assert_cantidad_positiva
+[0m23:26:50.299348 [debug] [Thread-1 (]: Writing runtime sql for node "test.ventas_dbt.assert_cantidad_positiva"
+[0m23:26:50.300439 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.assert_ingreso_no_negativo"
+[0m23:26:50.300820 [debug] [Thread-2 (]: On test.ventas_dbt.assert_ingreso_no_negativo: BEGIN
+[0m23:26:50.301119 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m23:26:50.301947 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m23:26:50.302314 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.assert_ingreso_no_negativo"
+[0m23:26:50.302614 [debug] [Thread-2 (]: On test.ventas_dbt.assert_ingreso_no_negativo: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "test.ventas_dbt.assert_ingreso_no_negativo"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select * from "warehouse"."main"."fct_ingresos_diarios" where ingreso_total < 0
+  
+  
+      
+    ) dbt_internal_test
+[0m23:26:50.303040 [debug] [Thread-1 (]: Using duckdb connection "test.ventas_dbt.assert_cantidad_positiva"
+[0m23:26:50.303374 [debug] [Thread-1 (]: On test.ventas_dbt.assert_cantidad_positiva: BEGIN
+[0m23:26:50.303643 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:26:50.304381 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:26:50.304803 [debug] [Thread-1 (]: Using duckdb connection "test.ventas_dbt.assert_cantidad_positiva"
+[0m23:26:50.305139 [debug] [Thread-1 (]: On test.ventas_dbt.assert_cantidad_positiva: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "test.ventas_dbt.assert_cantidad_positiva"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- Test singular: falla si devuelve filas.
+select * from "warehouse"."main"."stg_ventas" where cantidad <= 0
+  
+  
+      
+    ) dbt_internal_test
+[0m23:26:50.311477 [debug] [Thread-2 (]: SQL status: OK in 0.008 seconds
+[0m23:26:50.315600 [debug] [Thread-2 (]: On test.ventas_dbt.assert_ingreso_no_negativo: ROLLBACK
+[0m23:26:50.316733 [debug] [Thread-2 (]: On test.ventas_dbt.assert_ingreso_no_negativo: Close
+[0m23:26:50.317427 [info ] [Thread-2 (]: 2 of 9 PASS assert_ingreso_no_negativo ......................................... [[32mPASS[0m in 0.05s]
+[0m23:26:50.318131 [debug] [Thread-2 (]: Finished running node test.ventas_dbt.assert_ingreso_no_negativo
+[0m23:26:50.318500 [debug] [Thread-2 (]: Began running node test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95
+[0m23:26:50.318811 [info ] [Thread-2 (]: 3 of 9 START test not_null_fct_ingresos_diarios_fecha .......................... [RUN]
+[0m23:26:50.319402 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ventas_dbt.assert_ingreso_no_negativo, now test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95)
+[0m23:26:50.319827 [debug] [Thread-2 (]: Began compiling node test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95
+[0m23:26:50.330737 [debug] [Thread-2 (]: Writing injected SQL for node "test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95"
+[0m23:26:50.332362 [debug] [Thread-2 (]: Began executing node test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95
+[0m23:26:50.333999 [debug] [Thread-2 (]: Writing runtime sql for node "test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95"
+[0m23:26:50.335484 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95"
+[0m23:26:50.335907 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95: BEGIN
+[0m23:26:50.336191 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m23:26:50.336857 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m23:26:50.337185 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95"
+[0m23:26:50.337460 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fecha
+from "warehouse"."main"."fct_ingresos_diarios"
+where fecha is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:26:50.339779 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m23:26:50.342424 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95: ROLLBACK
+[0m23:26:50.343111 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95: Close
+[0m23:26:50.343786 [info ] [Thread-2 (]: 3 of 9 PASS not_null_fct_ingresos_diarios_fecha ................................ [[32mPASS[0m in 0.02s]
+[0m23:26:50.344750 [debug] [Thread-2 (]: Finished running node test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95
+[0m23:26:50.345313 [debug] [Thread-2 (]: Began running node test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5
+[0m23:26:50.346319 [debug] [Thread-1 (]: SQL status: OK in 0.041 seconds
+[0m23:26:50.345796 [info ] [Thread-2 (]: 4 of 9 START test not_null_fct_ingresos_diarios_ingreso_total .................. [RUN]
+[0m23:26:50.346920 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95, now test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5)
+[0m23:26:50.347236 [debug] [Thread-2 (]: Began compiling node test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5
+[0m23:26:50.352764 [debug] [Thread-2 (]: Writing injected SQL for node "test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5"
+[0m23:26:50.354790 [debug] [Thread-1 (]: On test.ventas_dbt.assert_cantidad_positiva: ROLLBACK
+[0m23:26:50.355943 [debug] [Thread-2 (]: Began executing node test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5
+[0m23:26:50.358411 [debug] [Thread-2 (]: Writing runtime sql for node "test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5"
+[0m23:26:50.358886 [debug] [Thread-1 (]: On test.ventas_dbt.assert_cantidad_positiva: Close
+[0m23:26:50.359572 [info ] [Thread-1 (]: 1 of 9 PASS assert_cantidad_positiva ........................................... [[32mPASS[0m in 0.08s]
+[0m23:26:50.360356 [debug] [Thread-1 (]: Finished running node test.ventas_dbt.assert_cantidad_positiva
+[0m23:26:50.360702 [debug] [Thread-1 (]: Began running node test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49
+[0m23:26:50.361001 [info ] [Thread-1 (]: 5 of 9 START test not_null_fct_ingresos_diarios_producto_id .................... [RUN]
+[0m23:26:50.361968 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ventas_dbt.assert_cantidad_positiva, now test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49)
+[0m23:26:50.362516 [debug] [Thread-1 (]: Began compiling node test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49
+[0m23:26:50.363257 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5"
+[0m23:26:50.363579 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5: BEGIN
+[0m23:26:50.363866 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m23:26:50.368943 [debug] [Thread-1 (]: Writing injected SQL for node "test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49"
+[0m23:26:50.369717 [debug] [Thread-2 (]: SQL status: OK in 0.006 seconds
+[0m23:26:50.370115 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5"
+[0m23:26:50.370421 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select ingreso_total
+from "warehouse"."main"."fct_ingresos_diarios"
+where ingreso_total is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:26:50.371325 [debug] [Thread-1 (]: Began executing node test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49
+[0m23:26:50.374118 [debug] [Thread-1 (]: Writing runtime sql for node "test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49"
+[0m23:26:50.375283 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m23:26:50.376838 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5: ROLLBACK
+[0m23:26:50.377557 [debug] [Thread-1 (]: Using duckdb connection "test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49"
+[0m23:26:50.377913 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49: BEGIN
+[0m23:26:50.378196 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:26:50.378673 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5: Close
+[0m23:26:50.379592 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:26:50.379936 [debug] [Thread-1 (]: Using duckdb connection "test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49"
+[0m23:26:50.380233 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select producto_id
+from "warehouse"."main"."fct_ingresos_diarios"
+where producto_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:26:50.379257 [info ] [Thread-2 (]: 4 of 9 PASS not_null_fct_ingresos_diarios_ingreso_total ........................ [[32mPASS[0m in 0.03s]
+[0m23:26:50.380919 [debug] [Thread-2 (]: Finished running node test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5
+[0m23:26:50.381256 [debug] [Thread-2 (]: Began running node test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19
+[0m23:26:50.381560 [info ] [Thread-2 (]: 6 of 9 START test not_null_stg_ventas_cantidad ................................. [RUN]
+[0m23:26:50.382142 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5, now test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19)
+[0m23:26:50.382460 [debug] [Thread-2 (]: Began compiling node test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19
+[0m23:26:50.387832 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m23:26:50.388732 [debug] [Thread-2 (]: Writing injected SQL for node "test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19"
+[0m23:26:50.391860 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49: ROLLBACK
+[0m23:26:50.392745 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49: Close
+[0m23:26:50.393385 [info ] [Thread-1 (]: 5 of 9 PASS not_null_fct_ingresos_diarios_producto_id .......................... [[32mPASS[0m in 0.03s]
+[0m23:26:50.394082 [debug] [Thread-1 (]: Finished running node test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49
+[0m23:26:50.394418 [debug] [Thread-1 (]: Began running node test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78
+[0m23:26:50.394720 [info ] [Thread-1 (]: 7 of 9 START test not_null_stg_ventas_fecha .................................... [RUN]
+[0m23:26:50.395274 [debug] [Thread-2 (]: Began executing node test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19
+[0m23:26:50.395808 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49, now test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78)
+[0m23:26:50.397470 [debug] [Thread-2 (]: Writing runtime sql for node "test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19"
+[0m23:26:50.397831 [debug] [Thread-1 (]: Began compiling node test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78
+[0m23:26:50.403076 [debug] [Thread-1 (]: Writing injected SQL for node "test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78"
+[0m23:26:50.404238 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19"
+[0m23:26:50.404889 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19: BEGIN
+[0m23:26:50.405570 [debug] [Thread-1 (]: Began executing node test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78
+[0m23:26:50.406135 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m23:26:50.408572 [debug] [Thread-1 (]: Writing runtime sql for node "test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78"
+[0m23:26:50.409626 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m23:26:50.410057 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19"
+[0m23:26:50.410372 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select cantidad
+from "warehouse"."main"."stg_ventas"
+where cantidad is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:26:50.411041 [debug] [Thread-1 (]: Using duckdb connection "test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78"
+[0m23:26:50.411400 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78: BEGIN
+[0m23:26:50.411708 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:26:50.412391 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:26:50.412707 [debug] [Thread-1 (]: Using duckdb connection "test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78"
+[0m23:26:50.412978 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fecha
+from "warehouse"."main"."stg_ventas"
+where fecha is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:26:50.444929 [debug] [Thread-2 (]: SQL status: OK in 0.034 seconds
+[0m23:26:50.445512 [debug] [Thread-1 (]: SQL status: OK in 0.032 seconds
+[0m23:26:50.446782 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19: ROLLBACK
+[0m23:26:50.447964 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78: ROLLBACK
+[0m23:26:50.448391 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19: Close
+[0m23:26:50.449250 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78: Close
+[0m23:26:50.448899 [info ] [Thread-2 (]: 6 of 9 PASS not_null_stg_ventas_cantidad ....................................... [[32mPASS[0m in 0.07s]
+[0m23:26:50.449885 [debug] [Thread-2 (]: Finished running node test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19
+[0m23:26:50.450210 [debug] [Thread-2 (]: Began running node test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1
+[0m23:26:50.450492 [info ] [Thread-2 (]: 8 of 9 START test not_null_stg_ventas_precio_unitario .......................... [RUN]
+[0m23:26:50.451295 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19, now test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1)
+[0m23:26:50.451544 [debug] [Thread-2 (]: Began compiling node test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1
+[0m23:26:50.458772 [debug] [Thread-2 (]: Writing injected SQL for node "test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1"
+[0m23:26:50.450895 [info ] [Thread-1 (]: 7 of 9 PASS not_null_stg_ventas_fecha .......................................... [[32mPASS[0m in 0.06s]
+[0m23:26:50.459526 [debug] [Thread-1 (]: Finished running node test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78
+[0m23:26:50.459862 [debug] [Thread-1 (]: Began running node test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc
+[0m23:26:50.460158 [info ] [Thread-1 (]: 9 of 9 START test not_null_stg_ventas_producto_id .............................. [RUN]
+[0m23:26:50.460802 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78, now test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc)
+[0m23:26:50.461250 [debug] [Thread-1 (]: Began compiling node test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc
+[0m23:26:50.466115 [debug] [Thread-1 (]: Writing injected SQL for node "test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc"
+[0m23:26:50.466802 [debug] [Thread-2 (]: Began executing node test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1
+[0m23:26:50.468276 [debug] [Thread-2 (]: Writing runtime sql for node "test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1"
+[0m23:26:50.468944 [debug] [Thread-1 (]: Began executing node test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc
+[0m23:26:50.470662 [debug] [Thread-1 (]: Writing runtime sql for node "test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc"
+[0m23:26:50.471647 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1"
+[0m23:26:50.472114 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1: BEGIN
+[0m23:26:50.472580 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m23:26:50.473265 [debug] [Thread-1 (]: Using duckdb connection "test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc"
+[0m23:26:50.473715 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc: BEGIN
+[0m23:26:50.474038 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:26:50.475209 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:26:50.475493 [debug] [Thread-1 (]: Using duckdb connection "test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc"
+[0m23:26:50.475730 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select producto_id
+from "warehouse"."main"."stg_ventas"
+where producto_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:26:50.476050 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m23:26:50.476343 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1"
+[0m23:26:50.476593 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select precio_unitario
+from "warehouse"."main"."stg_ventas"
+where precio_unitario is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:26:50.506469 [debug] [Thread-2 (]: SQL status: OK in 0.030 seconds
+[0m23:26:50.507931 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1: ROLLBACK
+[0m23:26:50.508384 [debug] [Thread-1 (]: SQL status: OK in 0.032 seconds
+[0m23:26:50.508805 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1: Close
+[0m23:26:50.509306 [info ] [Thread-2 (]: 8 of 9 PASS not_null_stg_ventas_precio_unitario ................................ [[32mPASS[0m in 0.06s]
+[0m23:26:50.509993 [debug] [Thread-2 (]: Finished running node test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1
+[0m23:26:50.511139 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc: ROLLBACK
+[0m23:26:50.511663 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc: Close
+[0m23:26:50.512142 [info ] [Thread-1 (]: 9 of 9 PASS not_null_stg_ventas_producto_id .................................... [[32mPASS[0m in 0.05s]
+[0m23:26:50.512704 [debug] [Thread-1 (]: Finished running node test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc
+[0m23:26:50.513827 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:26:50.514083 [debug] [MainThread]: On master: BEGIN
+[0m23:26:50.514286 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:26:50.514773 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:26:50.515012 [debug] [MainThread]: On master: COMMIT
+[0m23:26:50.515237 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:26:50.515430 [debug] [MainThread]: On master: COMMIT
+[0m23:26:50.515822 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:26:50.516046 [debug] [MainThread]: On master: Close
+[0m23:26:50.516333 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:26:50.516517 [debug] [MainThread]: Connection 'list_warehouse_main' was properly closed.
+[0m23:26:50.516691 [debug] [MainThread]: Connection 'test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1' was properly closed.
+[0m23:26:50.516856 [debug] [MainThread]: Connection 'test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc' was properly closed.
+[0m23:26:50.517079 [info ] [MainThread]: 
+[0m23:26:50.517394 [info ] [MainThread]: Finished running 9 data tests in 0 hours 0 minutes and 0.38 seconds (0.38s).
+[0m23:26:50.519253 [debug] [MainThread]: Command end result
+[0m23:26:50.575769 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\manifest.json
+[0m23:26:50.578831 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\semantic_manifest.json
+[0m23:26:50.581756 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\osi_document.json
+[0m23:26:50.593324 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\run_results.json
+[0m23:26:50.593672 [info ] [MainThread]: 
+[0m23:26:50.594242 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:26:50.594729 [info ] [MainThread]: 
+[0m23:26:50.595195 [info ] [MainThread]: Done. PASS=9 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=9
+[0m23:26:50.596223 [debug] [MainThread]: Command `dbt test` succeeded at 23:26:50.596106 after 1.45 seconds
+[0m23:26:50.596518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FF9FB3B950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFA0A9C730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFA0A9D230>]}
+[0m23:26:50.596794 [debug] [MainThread]: Flushing usage events
+[0m23:26:51.318803 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:54:44.219887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FF67B01A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FF8AFBED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FF8AFBB10>]}
+
+
+============================== 23:54:44.228310 | a13a7c0f-b294-466e-ad11-f543d7e5c657 ==============================
+[0m23:54:44.228310 [info ] [MainThread]: Running with dbt=1.12.6
+[0m23:54:44.229475 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run --profiles-dir .', 'log_path': 'C:\\Users\\Usuario Coder\\Documents\\Data Engineering\\dbt_project\\logs'}
+[0m23:54:44.609657 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a13a7c0f-b294-466e-ad11-f543d7e5c657', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FF69CCFC0>]}
+[0m23:54:44.692355 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a13a7c0f-b294-466e-ad11-f543d7e5c657', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FF613A580>]}
+[0m23:54:44.696891 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m23:54:44.985707 [debug] [MainThread]: checksum: c29b027e8ff215bd14db6128609fc1c48f22fb8c501ab4ce82aea29507899a3b, vars: {}, profile: ventas_dbt, target: dev, version: 1.12.6
+[0m23:54:45.154665 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:54:45.155076 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:54:45.155346 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:54:45.165708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a13a7c0f-b294-466e-ad11-f543d7e5c657', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FF930A950>]}
+[0m23:54:45.304213 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\manifest.json
+[0m23:54:45.307816 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\semantic_manifest.json
+[0m23:54:45.377338 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\osi_document.json
+[0m23:54:45.404504 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a13a7c0f-b294-466e-ad11-f543d7e5c657', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FF945BD40>]}
+[0m23:54:45.405429 [info ] [MainThread]: Found 2 models, 9 data tests, 500 macros
+[0m23:54:45.406138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a13a7c0f-b294-466e-ad11-f543d7e5c657', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FF94C5630>]}
+[0m23:54:45.408423 [info ] [MainThread]: 
+[0m23:54:45.409017 [info ] [MainThread]: Concurrency: 2 threads (target='dev')
+[0m23:54:45.409503 [info ] [MainThread]: 
+[0m23:54:45.410291 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m23:54:45.421310 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse'
+[0m23:54:45.540821 [debug] [ThreadPool]: Using duckdb connection "list_warehouse"
+[0m23:54:45.541299 [debug] [ThreadPool]: On list_warehouse: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "connection_name": "list_warehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"warehouse"'
+    
+  
+  
+[0m23:54:45.541603 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:54:45.588336 [debug] [ThreadPool]: SQL status: OK in 0.047 seconds
+[0m23:54:45.590321 [debug] [ThreadPool]: On list_warehouse: Close
+[0m23:54:45.591480 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_warehouse, now create_warehouse_main)
+[0m23:54:45.592288 [debug] [ThreadPool]: Creating schema "database: "warehouse"
+schema: "main"
+"
+[0m23:54:45.602421 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m23:54:45.602883 [debug] [ThreadPool]: On create_warehouse_main: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "connection_name": "create_warehouse_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='warehouse'
+        and type != 'duckdb'
+    
+  
+[0m23:54:45.603239 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:54:45.604876 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m23:54:45.606174 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m23:54:45.606500 [debug] [ThreadPool]: On create_warehouse_main: BEGIN
+[0m23:54:45.607261 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:54:45.607735 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m23:54:45.608134 [debug] [ThreadPool]: On create_warehouse_main: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "connection_name": "create_warehouse_main"} */
+
+    
+    
+        create schema if not exists "warehouse"."main"
+    
+[0m23:54:45.609133 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m23:54:45.610315 [debug] [ThreadPool]: On create_warehouse_main: COMMIT
+[0m23:54:45.610739 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_main"
+[0m23:54:45.611125 [debug] [ThreadPool]: On create_warehouse_main: COMMIT
+[0m23:54:45.611821 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m23:54:45.612243 [debug] [ThreadPool]: On create_warehouse_main: Close
+[0m23:54:45.614165 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_main'
+[0m23:54:45.621809 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_main"
+[0m23:54:45.622529 [debug] [ThreadPool]: On list_warehouse_main: BEGIN
+[0m23:54:45.623075 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:54:45.624191 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m23:54:45.624730 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_main"
+[0m23:54:45.625230 [debug] [ThreadPool]: On list_warehouse_main: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "connection_name": "list_warehouse_main"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m23:54:45.659743 [debug] [ThreadPool]: SQL status: OK in 0.034 seconds
+[0m23:54:45.662311 [debug] [ThreadPool]: On list_warehouse_main: ROLLBACK
+[0m23:54:45.663313 [debug] [ThreadPool]: On list_warehouse_main: Close
+[0m23:54:45.665262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a13a7c0f-b294-466e-ad11-f543d7e5c657', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FF962B520>]}
+[0m23:54:45.665837 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:54:45.666197 [debug] [MainThread]: On master: BEGIN
+[0m23:54:45.666515 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:54:45.667227 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:54:45.667591 [debug] [MainThread]: On master: COMMIT
+[0m23:54:45.667925 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:54:45.668233 [debug] [MainThread]: On master: COMMIT
+[0m23:54:45.668827 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:54:45.669196 [debug] [MainThread]: On master: Close
+[0m23:54:45.674412 [debug] [Thread-1 (]: Began running node model.ventas_dbt.stg_ventas
+[0m23:54:45.675023 [info ] [Thread-1 (]: 1 of 2 START sql view model main.stg_ventas .................................... [RUN]
+[0m23:54:45.675758 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.ventas_dbt.stg_ventas'
+[0m23:54:45.676133 [debug] [Thread-1 (]: Began compiling node model.ventas_dbt.stg_ventas
+[0m23:54:45.681081 [debug] [Thread-1 (]: Writing injected SQL for node "model.ventas_dbt.stg_ventas"
+[0m23:54:45.682754 [debug] [Thread-1 (]: Began executing node model.ventas_dbt.stg_ventas
+[0m23:54:45.719497 [debug] [Thread-1 (]: Writing runtime sql for node "model.ventas_dbt.stg_ventas"
+[0m23:54:45.720851 [debug] [Thread-1 (]: Using duckdb connection "model.ventas_dbt.stg_ventas"
+[0m23:54:45.721519 [debug] [Thread-1 (]: On model.ventas_dbt.stg_ventas: BEGIN
+[0m23:54:45.722058 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:54:45.723080 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:54:45.723446 [debug] [Thread-1 (]: Using duckdb connection "model.ventas_dbt.stg_ventas"
+[0m23:54:45.723777 [debug] [Thread-1 (]: On model.ventas_dbt.stg_ventas: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "model.ventas_dbt.stg_ventas"} */
+
+  
+  create view "warehouse"."main"."stg_ventas__dbt_tmp" as (
+    -- Capa staging: lee el CSV crudo y tipa las columnas.
+select
+    cast(fecha as date)             as fecha,
+    cast(producto_id as integer)    as producto_id,
+    cast(cantidad as integer)       as cantidad,
+    cast(precio_unitario as double) as precio_unitario
+from read_csv_auto('../data/ventas.csv', header = true)
+  );
+
+[0m23:54:45.761981 [debug] [Thread-1 (]: SQL status: OK in 0.038 seconds
+[0m23:54:45.767846 [debug] [Thread-1 (]: Using duckdb connection "model.ventas_dbt.stg_ventas"
+[0m23:54:45.768244 [debug] [Thread-1 (]: On model.ventas_dbt.stg_ventas: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "model.ventas_dbt.stg_ventas"} */
+alter view "warehouse"."main"."stg_ventas" rename to "stg_ventas__dbt_backup"
+[0m23:54:45.769212 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:54:45.771718 [debug] [Thread-1 (]: Using duckdb connection "model.ventas_dbt.stg_ventas"
+[0m23:54:45.772136 [debug] [Thread-1 (]: On model.ventas_dbt.stg_ventas: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "model.ventas_dbt.stg_ventas"} */
+alter view "warehouse"."main"."stg_ventas__dbt_tmp" rename to "stg_ventas"
+[0m23:54:45.773146 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:54:45.786603 [debug] [Thread-1 (]: On model.ventas_dbt.stg_ventas: COMMIT
+[0m23:54:45.787029 [debug] [Thread-1 (]: Using duckdb connection "model.ventas_dbt.stg_ventas"
+[0m23:54:45.787352 [debug] [Thread-1 (]: On model.ventas_dbt.stg_ventas: COMMIT
+[0m23:54:45.791780 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m23:54:45.796908 [debug] [Thread-1 (]: Using duckdb connection "model.ventas_dbt.stg_ventas"
+[0m23:54:45.797310 [debug] [Thread-1 (]: On model.ventas_dbt.stg_ventas: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "model.ventas_dbt.stg_ventas"} */
+
+      drop view if exists "warehouse"."main"."stg_ventas__dbt_backup" cascade
+    
+[0m23:54:45.799186 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:54:45.802008 [debug] [Thread-1 (]: On model.ventas_dbt.stg_ventas: Close
+[0m23:54:45.805111 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a13a7c0f-b294-466e-ad11-f543d7e5c657', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FF94DE210>]}
+[0m23:54:45.805919 [info ] [Thread-1 (]: 1 of 2 OK created sql view model main.stg_ventas ............................... [[32mOK[0m in 0.13s]
+[0m23:54:45.806853 [debug] [Thread-1 (]: Finished running node model.ventas_dbt.stg_ventas
+[0m23:54:45.807689 [debug] [Thread-2 (]: Began running node model.ventas_dbt.fct_ingresos_diarios
+[0m23:54:45.808220 [info ] [Thread-2 (]: 2 of 2 START sql table model main.fct_ingresos_diarios ......................... [RUN]
+[0m23:54:45.808969 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.ventas_dbt.fct_ingresos_diarios'
+[0m23:54:45.809344 [debug] [Thread-2 (]: Began compiling node model.ventas_dbt.fct_ingresos_diarios
+[0m23:54:45.811235 [debug] [Thread-2 (]: Writing injected SQL for node "model.ventas_dbt.fct_ingresos_diarios"
+[0m23:54:45.812407 [debug] [Thread-2 (]: Began executing node model.ventas_dbt.fct_ingresos_diarios
+[0m23:54:45.867879 [debug] [Thread-2 (]: Writing runtime sql for node "model.ventas_dbt.fct_ingresos_diarios"
+[0m23:54:45.869515 [debug] [Thread-2 (]: Using duckdb connection "model.ventas_dbt.fct_ingresos_diarios"
+[0m23:54:45.870103 [debug] [Thread-2 (]: On model.ventas_dbt.fct_ingresos_diarios: BEGIN
+[0m23:54:45.870570 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m23:54:45.871612 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m23:54:45.872098 [debug] [Thread-2 (]: Using duckdb connection "model.ventas_dbt.fct_ingresos_diarios"
+[0m23:54:45.872542 [debug] [Thread-2 (]: On model.ventas_dbt.fct_ingresos_diarios: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "model.ventas_dbt.fct_ingresos_diarios"} */
+
+    
+
+    create  table
+      "warehouse"."main"."fct_ingresos_diarios__dbt_tmp"
+  
+    
+    as (
+      -- Capa mart: mismo resultado que el job PySpark, expresado en SQL (permite cruzar resultados).
+select
+    fecha,
+    producto_id,
+    round(sum(cantidad * precio_unitario), 2) as ingreso_total
+from "warehouse"."main"."stg_ventas"
+group by fecha, producto_id
+order by fecha, producto_id
+    );
+    
+  
+[0m23:54:45.917070 [debug] [Thread-2 (]: SQL status: OK in 0.044 seconds
+[0m23:54:45.922139 [debug] [Thread-2 (]: Using duckdb connection "model.ventas_dbt.fct_ingresos_diarios"
+[0m23:54:45.922571 [debug] [Thread-2 (]: On model.ventas_dbt.fct_ingresos_diarios: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "model.ventas_dbt.fct_ingresos_diarios"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE database_name = 'warehouse'
+      AND schema_name = 'main'
+      AND table_name = 'fct_ingresos_diarios'
+  
+[0m23:54:45.924280 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m23:54:45.926661 [debug] [Thread-2 (]: Using duckdb connection "model.ventas_dbt.fct_ingresos_diarios"
+[0m23:54:45.927039 [debug] [Thread-2 (]: On model.ventas_dbt.fct_ingresos_diarios: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "model.ventas_dbt.fct_ingresos_diarios"} */
+alter table "warehouse"."main"."fct_ingresos_diarios" rename to "fct_ingresos_diarios__dbt_backup"
+[0m23:54:45.927936 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m23:54:45.929926 [debug] [Thread-2 (]: Using duckdb connection "model.ventas_dbt.fct_ingresos_diarios"
+[0m23:54:45.930272 [debug] [Thread-2 (]: On model.ventas_dbt.fct_ingresos_diarios: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "model.ventas_dbt.fct_ingresos_diarios"} */
+alter table "warehouse"."main"."fct_ingresos_diarios__dbt_tmp" rename to "fct_ingresos_diarios"
+[0m23:54:45.931063 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m23:54:45.935926 [debug] [Thread-2 (]: On model.ventas_dbt.fct_ingresos_diarios: COMMIT
+[0m23:54:45.936295 [debug] [Thread-2 (]: Using duckdb connection "model.ventas_dbt.fct_ingresos_diarios"
+[0m23:54:45.936602 [debug] [Thread-2 (]: On model.ventas_dbt.fct_ingresos_diarios: COMMIT
+[0m23:54:45.939561 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m23:54:45.941886 [debug] [Thread-2 (]: Using duckdb connection "model.ventas_dbt.fct_ingresos_diarios"
+[0m23:54:45.942309 [debug] [Thread-2 (]: On model.ventas_dbt.fct_ingresos_diarios: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "model.ventas_dbt.fct_ingresos_diarios"} */
+
+      drop table if exists "warehouse"."main"."fct_ingresos_diarios__dbt_backup" cascade
+    
+[0m23:54:45.944305 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m23:54:45.945849 [debug] [Thread-2 (]: On model.ventas_dbt.fct_ingresos_diarios: Close
+[0m23:54:45.946520 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a13a7c0f-b294-466e-ad11-f543d7e5c657', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FF94BF3E0>]}
+[0m23:54:45.947207 [info ] [Thread-2 (]: 2 of 2 OK created sql table model main.fct_ingresos_diarios .................... [[32mOK[0m in 0.14s]
+[0m23:54:45.948176 [debug] [Thread-2 (]: Finished running node model.ventas_dbt.fct_ingresos_diarios
+[0m23:54:45.949553 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:54:45.949882 [debug] [MainThread]: On master: BEGIN
+[0m23:54:45.950151 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:54:45.950847 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:54:45.951126 [debug] [MainThread]: On master: COMMIT
+[0m23:54:45.951384 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:54:45.951633 [debug] [MainThread]: On master: COMMIT
+[0m23:54:45.952139 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:54:45.952435 [debug] [MainThread]: On master: Close
+[0m23:54:45.952821 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:54:45.953055 [debug] [MainThread]: Connection 'create_warehouse_main' was properly closed.
+[0m23:54:45.953265 [debug] [MainThread]: Connection 'list_warehouse_main' was properly closed.
+[0m23:54:45.953467 [debug] [MainThread]: Connection 'model.ventas_dbt.stg_ventas' was properly closed.
+[0m23:54:45.953666 [debug] [MainThread]: Connection 'model.ventas_dbt.fct_ingresos_diarios' was properly closed.
+[0m23:54:45.954001 [info ] [MainThread]: 
+[0m23:54:45.954491 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 0.54 seconds (0.54s).
+[0m23:54:45.955799 [debug] [MainThread]: Command end result
+[0m23:54:46.005755 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\manifest.json
+[0m23:54:46.008552 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\semantic_manifest.json
+[0m23:54:46.011466 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\osi_document.json
+[0m23:54:46.020836 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\run_results.json
+[0m23:54:46.021303 [info ] [MainThread]: 
+[0m23:54:46.022021 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:54:46.022759 [info ] [MainThread]: 
+[0m23:54:46.023282 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=2
+[0m23:54:46.024628 [debug] [MainThread]: Command `dbt run` succeeded at 23:54:46.024486 after 2.13 seconds
+[0m23:54:46.025027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FF9794A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FF9755F40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FF94A3450>]}
+[0m23:54:46.025443 [debug] [MainThread]: Flushing usage events
+[0m23:54:47.020813 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:56:15.718828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E362F901A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3652DBED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3652DBB10>]}
+
+
+============================== 23:56:15.728414 | 632c9974-e64e-433e-a955-9a0b9da6c863 ==============================
+[0m23:56:15.728414 [info ] [MainThread]: Running with dbt=1.12.6
+[0m23:56:15.729850 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'invocation_command': 'dbt test --profiles-dir .', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\Usuario Coder\\Documents\\Data Engineering\\dbt_project\\logs'}
+[0m23:56:16.127975 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '632c9974-e64e-433e-a955-9a0b9da6c863', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3631ACFC0>]}
+[0m23:56:16.195519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '632c9974-e64e-433e-a955-9a0b9da6c863', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E36291A580>]}
+[0m23:56:16.199809 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m23:56:16.417300 [debug] [MainThread]: checksum: c29b027e8ff215bd14db6128609fc1c48f22fb8c501ab4ce82aea29507899a3b, vars: {}, profile: ventas_dbt, target: dev, version: 1.12.6
+[0m23:56:16.604970 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:56:16.605460 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:56:16.605753 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:56:16.616086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '632c9974-e64e-433e-a955-9a0b9da6c863', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E365A8A950>]}
+[0m23:56:16.756612 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\manifest.json
+[0m23:56:16.759670 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\semantic_manifest.json
+[0m23:56:16.807824 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\osi_document.json
+[0m23:56:16.854464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '632c9974-e64e-433e-a955-9a0b9da6c863', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E365C833E0>]}
+[0m23:56:16.855189 [info ] [MainThread]: Found 2 models, 9 data tests, 500 macros
+[0m23:56:16.855849 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '632c9974-e64e-433e-a955-9a0b9da6c863', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E365C897F0>]}
+[0m23:56:16.858776 [info ] [MainThread]: 
+[0m23:56:16.859438 [info ] [MainThread]: Concurrency: 2 threads (target='dev')
+[0m23:56:16.859968 [info ] [MainThread]: 
+[0m23:56:16.860901 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m23:56:16.867772 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_main'
+[0m23:56:16.954155 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_main"
+[0m23:56:16.954892 [debug] [ThreadPool]: On list_warehouse_main: BEGIN
+[0m23:56:16.955431 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:56:17.063173 [debug] [ThreadPool]: SQL status: OK in 0.108 seconds
+[0m23:56:17.063888 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_main"
+[0m23:56:17.064521 [debug] [ThreadPool]: On list_warehouse_main: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "connection_name": "list_warehouse_main"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m23:56:17.095562 [debug] [ThreadPool]: SQL status: OK in 0.030 seconds
+[0m23:56:17.099022 [debug] [ThreadPool]: On list_warehouse_main: ROLLBACK
+[0m23:56:17.100129 [debug] [ThreadPool]: On list_warehouse_main: Close
+[0m23:56:17.101869 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '632c9974-e64e-433e-a955-9a0b9da6c863', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E365E76DD0>]}
+[0m23:56:17.102427 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:56:17.102725 [debug] [MainThread]: On master: BEGIN
+[0m23:56:17.102992 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:56:17.103677 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:56:17.103987 [debug] [MainThread]: On master: COMMIT
+[0m23:56:17.104258 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:56:17.104507 [debug] [MainThread]: On master: COMMIT
+[0m23:56:17.105095 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:56:17.105613 [debug] [MainThread]: On master: Close
+[0m23:56:17.112516 [debug] [Thread-1 (]: Began running node test.ventas_dbt.assert_cantidad_positiva
+[0m23:56:17.113278 [debug] [Thread-2 (]: Began running node test.ventas_dbt.assert_ingreso_no_negativo
+[0m23:56:17.113811 [info ] [Thread-1 (]: 1 of 9 START test assert_cantidad_positiva ..................................... [RUN]
+[0m23:56:17.115139 [debug] [Thread-1 (]: Acquiring new duckdb connection 'test.ventas_dbt.assert_cantidad_positiva'
+[0m23:56:17.114347 [info ] [Thread-2 (]: 2 of 9 START test assert_ingreso_no_negativo ................................... [RUN]
+[0m23:56:17.115645 [debug] [Thread-1 (]: Began compiling node test.ventas_dbt.assert_cantidad_positiva
+[0m23:56:17.116241 [debug] [Thread-2 (]: Acquiring new duckdb connection 'test.ventas_dbt.assert_ingreso_no_negativo'
+[0m23:56:17.122379 [debug] [Thread-1 (]: Writing injected SQL for node "test.ventas_dbt.assert_cantidad_positiva"
+[0m23:56:17.122997 [debug] [Thread-2 (]: Began compiling node test.ventas_dbt.assert_ingreso_no_negativo
+[0m23:56:17.125929 [debug] [Thread-2 (]: Writing injected SQL for node "test.ventas_dbt.assert_ingreso_no_negativo"
+[0m23:56:17.127233 [debug] [Thread-1 (]: Began executing node test.ventas_dbt.assert_cantidad_positiva
+[0m23:56:17.128531 [debug] [Thread-2 (]: Began executing node test.ventas_dbt.assert_ingreso_no_negativo
+[0m23:56:17.165257 [debug] [Thread-1 (]: Writing runtime sql for node "test.ventas_dbt.assert_cantidad_positiva"
+[0m23:56:17.169052 [debug] [Thread-2 (]: Writing runtime sql for node "test.ventas_dbt.assert_ingreso_no_negativo"
+[0m23:56:17.170938 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.assert_ingreso_no_negativo"
+[0m23:56:17.171599 [debug] [Thread-2 (]: On test.ventas_dbt.assert_ingreso_no_negativo: BEGIN
+[0m23:56:17.172152 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m23:56:17.172818 [debug] [Thread-1 (]: Using duckdb connection "test.ventas_dbt.assert_cantidad_positiva"
+[0m23:56:17.173671 [debug] [Thread-1 (]: On test.ventas_dbt.assert_cantidad_positiva: BEGIN
+[0m23:56:17.174565 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:56:17.175428 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m23:56:17.176016 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.assert_ingreso_no_negativo"
+[0m23:56:17.176451 [debug] [Thread-2 (]: On test.ventas_dbt.assert_ingreso_no_negativo: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "test.ventas_dbt.assert_ingreso_no_negativo"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select * from "warehouse"."main"."fct_ingresos_diarios" where ingreso_total < 0
+  
+  
+      
+    ) dbt_internal_test
+[0m23:56:17.176952 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m23:56:17.177338 [debug] [Thread-1 (]: Using duckdb connection "test.ventas_dbt.assert_cantidad_positiva"
+[0m23:56:17.177856 [debug] [Thread-1 (]: On test.ventas_dbt.assert_cantidad_positiva: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "test.ventas_dbt.assert_cantidad_positiva"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- Test singular: falla si devuelve filas.
+select * from "warehouse"."main"."stg_ventas" where cantidad <= 0
+  
+  
+      
+    ) dbt_internal_test
+[0m23:56:17.180056 [debug] [Thread-2 (]: SQL status: OK in 0.003 seconds
+[0m23:56:17.187859 [debug] [Thread-2 (]: On test.ventas_dbt.assert_ingreso_no_negativo: ROLLBACK
+[0m23:56:17.189108 [debug] [Thread-2 (]: On test.ventas_dbt.assert_ingreso_no_negativo: Close
+[0m23:56:17.190230 [info ] [Thread-2 (]: 2 of 9 PASS assert_ingreso_no_negativo ......................................... [[32mPASS[0m in 0.07s]
+[0m23:56:17.191468 [debug] [Thread-2 (]: Finished running node test.ventas_dbt.assert_ingreso_no_negativo
+[0m23:56:17.192126 [debug] [Thread-2 (]: Began running node test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95
+[0m23:56:17.192828 [info ] [Thread-2 (]: 3 of 9 START test not_null_fct_ingresos_diarios_fecha .......................... [RUN]
+[0m23:56:17.193617 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ventas_dbt.assert_ingreso_no_negativo, now test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95)
+[0m23:56:17.194160 [debug] [Thread-2 (]: Began compiling node test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95
+[0m23:56:17.216630 [debug] [Thread-2 (]: Writing injected SQL for node "test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95"
+[0m23:56:17.218693 [debug] [Thread-2 (]: Began executing node test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95
+[0m23:56:17.221931 [debug] [Thread-2 (]: Writing runtime sql for node "test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95"
+[0m23:56:17.223531 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95"
+[0m23:56:17.224237 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95: BEGIN
+[0m23:56:17.224801 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m23:56:17.225845 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m23:56:17.226389 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95"
+[0m23:56:17.226911 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fecha
+from "warehouse"."main"."fct_ingresos_diarios"
+where fecha is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:56:17.229155 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m23:56:17.231585 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95: ROLLBACK
+[0m23:56:17.232516 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95: Close
+[0m23:56:17.233521 [info ] [Thread-2 (]: 3 of 9 PASS not_null_fct_ingresos_diarios_fecha ................................ [[32mPASS[0m in 0.04s]
+[0m23:56:17.234587 [debug] [Thread-2 (]: Finished running node test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95
+[0m23:56:17.235188 [debug] [Thread-2 (]: Began running node test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5
+[0m23:56:17.236021 [info ] [Thread-2 (]: 4 of 9 START test not_null_fct_ingresos_diarios_ingreso_total .................. [RUN]
+[0m23:56:17.236851 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ventas_dbt.not_null_fct_ingresos_diarios_fecha.46863aef95, now test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5)
+[0m23:56:17.237419 [debug] [Thread-2 (]: Began compiling node test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5
+[0m23:56:17.247564 [debug] [Thread-2 (]: Writing injected SQL for node "test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5"
+[0m23:56:17.248378 [debug] [Thread-1 (]: SQL status: OK in 0.070 seconds
+[0m23:56:17.252874 [debug] [Thread-1 (]: On test.ventas_dbt.assert_cantidad_positiva: ROLLBACK
+[0m23:56:17.254220 [debug] [Thread-2 (]: Began executing node test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5
+[0m23:56:17.256960 [debug] [Thread-2 (]: Writing runtime sql for node "test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5"
+[0m23:56:17.257544 [debug] [Thread-1 (]: On test.ventas_dbt.assert_cantidad_positiva: Close
+[0m23:56:17.258367 [info ] [Thread-1 (]: 1 of 9 PASS assert_cantidad_positiva ........................................... [[32mPASS[0m in 0.14s]
+[0m23:56:17.259348 [debug] [Thread-1 (]: Finished running node test.ventas_dbt.assert_cantidad_positiva
+[0m23:56:17.259838 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5"
+[0m23:56:17.260427 [debug] [Thread-1 (]: Began running node test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49
+[0m23:56:17.261079 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5: BEGIN
+[0m23:56:17.262102 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m23:56:17.261579 [info ] [Thread-1 (]: 5 of 9 START test not_null_fct_ingresos_diarios_producto_id .................... [RUN]
+[0m23:56:17.263122 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ventas_dbt.assert_cantidad_positiva, now test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49)
+[0m23:56:17.263696 [debug] [Thread-1 (]: Began compiling node test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49
+[0m23:56:17.268482 [debug] [Thread-2 (]: SQL status: OK in 0.006 seconds
+[0m23:56:17.274333 [debug] [Thread-1 (]: Writing injected SQL for node "test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49"
+[0m23:56:17.275264 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5"
+[0m23:56:17.276710 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select ingreso_total
+from "warehouse"."main"."fct_ingresos_diarios"
+where ingreso_total is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:56:17.278245 [debug] [Thread-1 (]: Began executing node test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49
+[0m23:56:17.280584 [debug] [Thread-1 (]: Writing runtime sql for node "test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49"
+[0m23:56:17.281231 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m23:56:17.283583 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5: ROLLBACK
+[0m23:56:17.284887 [debug] [Thread-1 (]: Using duckdb connection "test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49"
+[0m23:56:17.285896 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49: BEGIN
+[0m23:56:17.287040 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:56:17.288558 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5: Close
+[0m23:56:17.289705 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m23:56:17.291623 [debug] [Thread-1 (]: Using duckdb connection "test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49"
+[0m23:56:17.291036 [info ] [Thread-2 (]: 4 of 9 PASS not_null_fct_ingresos_diarios_ingreso_total ........................ [[32mPASS[0m in 0.05s]
+[0m23:56:17.292445 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select producto_id
+from "warehouse"."main"."fct_ingresos_diarios"
+where producto_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:56:17.293094 [debug] [Thread-2 (]: Finished running node test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5
+[0m23:56:17.293839 [debug] [Thread-2 (]: Began running node test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19
+[0m23:56:17.294647 [info ] [Thread-2 (]: 6 of 9 START test not_null_stg_ventas_cantidad ................................. [RUN]
+[0m23:56:17.295722 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ventas_dbt.not_null_fct_ingresos_diarios_ingreso_total.99d20365a5, now test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19)
+[0m23:56:17.296229 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m23:56:17.296761 [debug] [Thread-2 (]: Began compiling node test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19
+[0m23:56:17.308489 [debug] [Thread-2 (]: Writing injected SQL for node "test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19"
+[0m23:56:17.310498 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49: ROLLBACK
+[0m23:56:17.311706 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49: Close
+[0m23:56:17.312453 [debug] [Thread-2 (]: Began executing node test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19
+[0m23:56:17.316206 [debug] [Thread-2 (]: Writing runtime sql for node "test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19"
+[0m23:56:17.313415 [info ] [Thread-1 (]: 5 of 9 PASS not_null_fct_ingresos_diarios_producto_id .......................... [[32mPASS[0m in 0.05s]
+[0m23:56:17.317117 [debug] [Thread-1 (]: Finished running node test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49
+[0m23:56:17.317607 [debug] [Thread-1 (]: Began running node test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78
+[0m23:56:17.318080 [info ] [Thread-1 (]: 7 of 9 START test not_null_stg_ventas_fecha .................................... [RUN]
+[0m23:56:17.319262 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ventas_dbt.not_null_fct_ingresos_diarios_producto_id.d3563d2b49, now test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78)
+[0m23:56:17.320565 [debug] [Thread-1 (]: Began compiling node test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78
+[0m23:56:17.329859 [debug] [Thread-1 (]: Writing injected SQL for node "test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78"
+[0m23:56:17.330849 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19"
+[0m23:56:17.331525 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19: BEGIN
+[0m23:56:17.332091 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m23:56:17.333100 [debug] [Thread-1 (]: Began executing node test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78
+[0m23:56:17.335618 [debug] [Thread-1 (]: Writing runtime sql for node "test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78"
+[0m23:56:17.336703 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m23:56:17.337440 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19"
+[0m23:56:17.338093 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select cantidad
+from "warehouse"."main"."stg_ventas"
+where cantidad is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:56:17.339537 [debug] [Thread-1 (]: Using duckdb connection "test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78"
+[0m23:56:17.341085 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78: BEGIN
+[0m23:56:17.341605 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:56:17.342567 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m23:56:17.342915 [debug] [Thread-1 (]: Using duckdb connection "test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78"
+[0m23:56:17.343223 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fecha
+from "warehouse"."main"."stg_ventas"
+where fecha is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:56:17.384476 [debug] [Thread-1 (]: SQL status: OK in 0.041 seconds
+[0m23:56:17.387611 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78: ROLLBACK
+[0m23:56:17.388694 [debug] [Thread-2 (]: SQL status: OK in 0.050 seconds
+[0m23:56:17.389425 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78: Close
+[0m23:56:17.390524 [info ] [Thread-1 (]: 7 of 9 PASS not_null_stg_ventas_fecha .......................................... [[32mPASS[0m in 0.07s]
+[0m23:56:17.391531 [debug] [Thread-1 (]: Finished running node test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78
+[0m23:56:17.393675 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19: ROLLBACK
+[0m23:56:17.394309 [debug] [Thread-1 (]: Began running node test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1
+[0m23:56:17.395562 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19: Close
+[0m23:56:17.395067 [info ] [Thread-1 (]: 8 of 9 START test not_null_stg_ventas_precio_unitario .......................... [RUN]
+[0m23:56:17.396441 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ventas_dbt.not_null_stg_ventas_fecha.33467c8f78, now test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1)
+[0m23:56:17.397766 [debug] [Thread-1 (]: Began compiling node test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1
+[0m23:56:17.397214 [info ] [Thread-2 (]: 6 of 9 PASS not_null_stg_ventas_cantidad ....................................... [[32mPASS[0m in 0.10s]
+[0m23:56:17.408802 [debug] [Thread-1 (]: Writing injected SQL for node "test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1"
+[0m23:56:17.409931 [debug] [Thread-2 (]: Finished running node test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19
+[0m23:56:17.410773 [debug] [Thread-2 (]: Began running node test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc
+[0m23:56:17.411480 [info ] [Thread-2 (]: 9 of 9 START test not_null_stg_ventas_producto_id .............................. [RUN]
+[0m23:56:17.412452 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ventas_dbt.not_null_stg_ventas_cantidad.07c9fe8b19, now test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc)
+[0m23:56:17.412849 [debug] [Thread-2 (]: Began compiling node test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc
+[0m23:56:17.419426 [debug] [Thread-2 (]: Writing injected SQL for node "test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc"
+[0m23:56:17.421144 [debug] [Thread-1 (]: Began executing node test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1
+[0m23:56:17.425578 [debug] [Thread-1 (]: Writing runtime sql for node "test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1"
+[0m23:56:17.426844 [debug] [Thread-2 (]: Began executing node test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc
+[0m23:56:17.429809 [debug] [Thread-2 (]: Writing runtime sql for node "test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc"
+[0m23:56:17.430844 [debug] [Thread-1 (]: Using duckdb connection "test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1"
+[0m23:56:17.431483 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1: BEGIN
+[0m23:56:17.432081 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:56:17.432995 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc"
+[0m23:56:17.433524 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc: BEGIN
+[0m23:56:17.433935 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m23:56:17.434308 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m23:56:17.434838 [debug] [Thread-1 (]: Using duckdb connection "test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1"
+[0m23:56:17.435567 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select precio_unitario
+from "warehouse"."main"."stg_ventas"
+where precio_unitario is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:56:17.436433 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m23:56:17.436863 [debug] [Thread-2 (]: Using duckdb connection "test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc"
+[0m23:56:17.437254 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "ventas_dbt", "target_name": "dev", "node_id": "test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select producto_id
+from "warehouse"."main"."stg_ventas"
+where producto_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:56:17.482240 [debug] [Thread-2 (]: SQL status: OK in 0.044 seconds
+[0m23:56:17.485358 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc: ROLLBACK
+[0m23:56:17.486298 [debug] [Thread-1 (]: SQL status: OK in 0.050 seconds
+[0m23:56:17.488099 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1: ROLLBACK
+[0m23:56:17.488605 [debug] [Thread-2 (]: On test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc: Close
+[0m23:56:17.490006 [debug] [Thread-1 (]: On test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1: Close
+[0m23:56:17.489508 [info ] [Thread-2 (]: 9 of 9 PASS not_null_stg_ventas_producto_id .................................... [[32mPASS[0m in 0.08s]
+[0m23:56:17.491564 [debug] [Thread-2 (]: Finished running node test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc
+[0m23:56:17.490875 [info ] [Thread-1 (]: 8 of 9 PASS not_null_stg_ventas_precio_unitario ................................ [[32mPASS[0m in 0.09s]
+[0m23:56:17.492525 [debug] [Thread-1 (]: Finished running node test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1
+[0m23:56:17.494148 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:56:17.494636 [debug] [MainThread]: On master: BEGIN
+[0m23:56:17.495085 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:56:17.495811 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m23:56:17.496123 [debug] [MainThread]: On master: COMMIT
+[0m23:56:17.496400 [debug] [MainThread]: Using duckdb connection "master"
+[0m23:56:17.496652 [debug] [MainThread]: On master: COMMIT
+[0m23:56:17.497231 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m23:56:17.497510 [debug] [MainThread]: On master: Close
+[0m23:56:17.497899 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:56:17.498169 [debug] [MainThread]: Connection 'list_warehouse_main' was properly closed.
+[0m23:56:17.498410 [debug] [MainThread]: Connection 'test.ventas_dbt.not_null_stg_ventas_precio_unitario.a4ffbcf3e1' was properly closed.
+[0m23:56:17.498639 [debug] [MainThread]: Connection 'test.ventas_dbt.not_null_stg_ventas_producto_id.149461b4fc' was properly closed.
+[0m23:56:17.499109 [info ] [MainThread]: 
+[0m23:56:17.499802 [info ] [MainThread]: Finished running 9 data tests in 0 hours 0 minutes and 0.64 seconds (0.64s).
+[0m23:56:17.502927 [debug] [MainThread]: Command end result
+[0m23:56:17.550026 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\manifest.json
+[0m23:56:17.554611 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\semantic_manifest.json
+[0m23:56:17.559151 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\osi_document.json
+[0m23:56:17.569460 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Usuario Coder\Documents\Data Engineering\dbt_project\target\run_results.json
+[0m23:56:17.569943 [info ] [MainThread]: 
+[0m23:56:17.570675 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:56:17.571228 [info ] [MainThread]: 
+[0m23:56:17.571743 [info ] [MainThread]: Done. PASS=9 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=9
+[0m23:56:17.573005 [debug] [MainThread]: Command `dbt test` succeeded at 23:56:17.572872 after 2.21 seconds
+[0m23:56:17.573396 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E364F8B950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E365ECD7B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E365ECCF70>]}
+[0m23:56:17.573804 [debug] [MainThread]: Flushing usage events
+[0m23:56:18.466239 [debug] [MainThread]: An error was encountered while trying to flush usage events

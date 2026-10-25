@@ -1,0 +1,21 @@
+groups:
+  - name: pipeline
+    rules:
+      - alert: PipelineFalloUltimaCorrida
+        expr: pipeline_last_run_success == 0
+        for: 1m
+        labels: { severity: critical }
+        annotations:
+          summary: "La última corrida del pipeline de ventas falló"
+      - alert: PipelineSinEjecutarEn24h
+        expr: time() - pipeline_last_run_timestamp > 86400
+        for: 5m
+        labels: { severity: warning }
+        annotations:
+          summary: "El pipeline no corre hace más de 24 horas"
+      - alert: PipelineSalidaVacia
+        expr: pipeline_rows_output == 0
+        for: 1m
+        labels: { severity: critical }
+        annotations:
+          summary: "El pipeline generó 0 filas de salida"

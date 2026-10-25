@@ -1,0 +1,49 @@
+services:
+  pipeline:
+    build: .
+    volumes:
+      - ./output:/app/output
+    environment:
+      LOG_LEVEL: INFO
+
+  airflow:
+    image: apache/airflow:2.10.0
+    command: standalone
+    ports:
+      - "8080:8080"
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - .:/opt/airflow/project
+      - metrics:/textfile
+
+  node-exporter:
+    image: prom/node-exporter:latest
+    command:
+      - --collector.textfile.directory=/textfile
+    volumes:
+      - metrics:/textfile:ro
+    ports:
+      - "9100:9100"
+
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./observability/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./observability/alerts.yml:/etc/prometheus/alerts.yml:ro
+    ports:
+      - "9090:9090"
+    depends_on: [node-exporter]
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./observability/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./observability/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    depends_on: [prometheus]
+
+volumes:
+  metrics:

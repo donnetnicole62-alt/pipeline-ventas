@@ -1,0 +1,7 @@
+ventas_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../output/warehouse.duckdb
+      threads: 2

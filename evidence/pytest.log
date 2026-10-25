@@ -1,0 +1,19 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.17, pytest-9.1.1, pluggy-1.7.0 -- /usr/local/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/claude/project
+configfile: pytest.ini
+testpaths: tests
+plugins: platformdirs-4.12.4, anyio-4.15.1
+collecting ... collected 8 items
+
+tests/test_pipeline.py::test_ingreso_total_es_cantidad_por_precio PASSED [ 12%]
+tests/test_pipeline.py::test_agregacion_suma_por_fecha_y_producto PASSED [ 25%]
+tests/test_pipeline.py::test_validate_input_ok PASSED                    [ 37%]
+tests/test_pipeline.py::test_validate_input_detecta_cantidad_no_positiva PASSED [ 50%]
+tests/test_pipeline.py::test_validate_input_detecta_precio_negativo PASSED [ 62%]
+tests/test_pipeline.py::test_validate_input_detecta_nulos PASSED         [ 75%]
+tests/test_pipeline.py::test_validate_output_detecta_total_distinto PASSED [ 87%]
+tests/test_pipeline.py::test_pipeline_end_to_end PASSED                  [100%]
+
+============================== 8 passed in 21.27s ==============================

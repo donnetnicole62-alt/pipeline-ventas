@@ -1,0 +1,15 @@
+# HELP pipeline_rows_input Registros leídos en la última corrida
+# TYPE pipeline_rows_input gauge
+pipeline_rows_input 500
+# HELP pipeline_rows_output Registros escritos en la última corrida
+# TYPE pipeline_rows_output gauge
+pipeline_rows_output 0
+# HELP pipeline_duration_seconds Duración de la última corrida
+# TYPE pipeline_duration_seconds gauge
+pipeline_duration_seconds 15.12
+# HELP pipeline_last_run_success 1 si la última corrida terminó OK
+# TYPE pipeline_last_run_success gauge
+pipeline_last_run_success 0
+# HELP pipeline_last_run_timestamp Unix timestamp de la última corrida
+# TYPE pipeline_last_run_timestamp gauge
+pipeline_last_run_timestamp 1792897434

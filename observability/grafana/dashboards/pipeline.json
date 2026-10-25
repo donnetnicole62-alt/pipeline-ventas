@@ -1,0 +1,16 @@
+{
+  "title": "Pipeline de Ventas",
+  "uid": "ventas-pipeline",
+  "schemaVersion": 39,
+  "refresh": "30s",
+  "panels": [
+    {"id": 1, "type": "stat", "title": "Última corrida OK (1=sí)", "gridPos": {"x": 0, "y": 0, "w": 6, "h": 5},
+     "targets": [{"expr": "pipeline_last_run_success"}]},
+    {"id": 2, "type": "stat", "title": "Registros de entrada", "gridPos": {"x": 6, "y": 0, "w": 6, "h": 5},
+     "targets": [{"expr": "pipeline_rows_input"}]},
+    {"id": 3, "type": "stat", "title": "Registros de salida", "gridPos": {"x": 12, "y": 0, "w": 6, "h": 5},
+     "targets": [{"expr": "pipeline_rows_output"}]},
+    {"id": 4, "type": "timeseries", "title": "Duración (s)", "gridPos": {"x": 0, "y": 5, "w": 18, "h": 8},
+     "targets": [{"expr": "pipeline_duration_seconds"}]}
+  ]
+}

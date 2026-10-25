@@ -1,0 +1,6 @@
+2026-10-24 03:06:28,444 | INFO | ingest | Ingesta OK: 500 registros leídos desde /home/claude/project/data/ventas.csv
+2026-10-24 03:06:29,718 | INFO | validate | Validación de entrada OK: {'nulos_en_columnas_clave': 0, 'cantidad_no_positiva': 0, 'precio_negativo': 0}
+2026-10-24 03:06:30,738 | INFO | transform | Transformación OK: 148 filas agregadas
+2026-10-24 03:06:33,122 | INFO | validate | Validación de salida OK: {'ingresos_negativos': 0, 'ingresos_nulos': 0, 'claves_duplicadas': 0, 'total_conservado': True}
+2026-10-24 03:06:34,152 | INFO | run_pipeline | Output guardado en /home/claude/project/output/ingresos_por_producto_fecha (Parquet)
+2026-10-24 03:06:34,153 | INFO | run_pipeline | PIPELINE OK en 14.94s

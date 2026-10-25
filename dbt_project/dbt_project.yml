@@ -1,0 +1,14 @@
+name: ventas_dbt
+version: "1.0.0"
+config-version: 2
+profile: ventas_dbt
+
+model-paths: ["models"]
+test-paths: ["tests"]
+
+models:
+  ventas_dbt:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
