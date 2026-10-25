@@ -28,7 +28,7 @@ jobs:
       - name: dbt run + test
         run: |
           cd dbt_project
-          dbt run --profiles-dir .
-          dbt test --profiles-dir .
+          dbt run --profiles-dir . --no-partial-parse
+          dbt test --profiles-dir . --no-partial-parse
       - name: Build de imagen Docker
         run: docker build -t ventas-pipeline .
