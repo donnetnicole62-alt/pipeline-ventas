@@ -1,1 +1,0 @@
-select * from "warehouse"."main"."fct_ingresos_diarios" where ingreso_total < 0
